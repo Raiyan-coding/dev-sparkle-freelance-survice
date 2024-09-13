@@ -1,0 +1,116 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark mode background */
+    color: #e0e0e0; /* Light text color */
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #1e1e1e;
+    padding: 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #bb86fc;
+    transition: color 0.3s;
+}
+
+/* Main Section Styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Grid Layout for Gig Cards */
+#gigs {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Default grid layout */
+}
+
+/* Gig Card Styles */
+.gig-card {
+    background: #1f1f1f;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gig-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.gig-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.gig-card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #bb86fc;
+    margin-bottom: 15px;
+}
+
+.order-button {
+    background-color: #bb86fc;
+    color: #121212;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.order-button:hover {
+    background-color: #8a4dff;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    #gigs {
+        grid-template-columns: repeat(2, 1fr); /* 2 gig cards per row on tablets */
+    }
+}
+
+@media (min-width: 1024px) {
+    #gigs {
+        grid-template-columns: repeat(3, 1fr); /* 3 gig cards per row on PCs */
+    }
+}
